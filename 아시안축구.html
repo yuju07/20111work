@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>축구 승률 계산기</title>
+    <style>
+
+.video {
+  width: 700px;
+
+
+    </style>
+
+</head>
+<body>
+
+
+
+      <div class="video">
+          <video controls>
+              <source src="1012213412-preview.mp4" controls
+              autoplay muted loop>
+
+          </video>
+      </div>
+
+      <p>
+        한일전에서 한국이 이길 확률 계산하기
+        <li>- 한국이 이기는 횟수를 X라고 하면, X ~ Poisson(λ=0.4)
+      <li>- 확률질량함수: P(X=x) = e^(-λ) * λ^x / x!
+      <li>- 한국이 1번 이기는 확률: P(X=1) = e^(-0.4) * 0.4^1 / 1! = 0.2707 = 27.07%
+
+      따라서 이번 한일전에서 <span id="target-span" style="background-color: gold;">한국이 1번 이길 확률은 약 27.07%</span>로 계산된다.
+
+      </p>
+</body>
+</html>

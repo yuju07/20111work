@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <h4># 평균 득점 설정</h4>
+<li>lambda_cv = 75  # 카보베르데 평균 득점
+<li>lambda_ng = 85  # 나이지리아 평균 득점
+
+<h4># 시뮬레이션 횟수 설정</h4>
+<li>num_simulations = 10000
+
+<h4># 시뮬레이션 실행</h4>
+<li>cv_wins = 0
+<li>ng_wins = 0
+
+<li>for _ in range(num_simulations):
+    <li>cv_score = np.random.poisson(lambda_cv)
+    <li>ng_score = np.random.poisson(lambda_ng)
+
+    <li>if cv_score > ng_score:
+      <li>  cv_wins += 1
+  <li>  elif ng_score > cv_score:
+      <li>  ng_wins += 1
+
+<h4># 승리 확률 계산</h4>
+<li>cv_win_prob = cv_wins / num_simulations
+<li>ng_win_prob = ng_wins / num_simulations
+
+<h3><li>카보베르데 승리 확률: 35.20%
+<li>나이지리아 승리 확률: 64.80% </h3>

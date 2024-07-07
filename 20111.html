@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>축구 승률 계산기</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+            flex-direction: column;
+        }
+        .navbar {
+            width: 100%;
+            background: #4CAF50;
+            padding: 10px 0;
+            color: white;
+            text-align: center;
+            font-size: 1.2em;
+        }
+        .main-content {
+            display: flex;
+            flex: 1;
+        }
+        .sidebar {
+            width: 200px;
+            background: #333;
+            color: white;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 10px 0;
+        }
+
+        .iframe-container {
+            flex: 1;
+            padding: 0;
+            overflow: hidden;
+        }
+        .iframe-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        오늘의 스포츠 승률 계산기
+    </div>
+    <div class="main-content">
+      <div class="sidebar">
+          <a href="soccer.html"html target="iframe_content">축구</a>
+          <a href="basketball.html"html target="iframe_content">농구</a>
+          <a href="volleyball.html"html target="iframe_content">배구</a>
+          <a href="baseball.html"html target="iframe_content">야구</a>
+          <a href="rugby.html"html target="iframe_content">럭비</a>
+      </div>
+        <div class="iframe-container">
+            <iframe name="iframe_content" ></iframe>
+        </div>
+    </div>
+</body>
+</html>
